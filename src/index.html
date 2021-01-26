@@ -1,0 +1,79 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-firestore.js"></script>
+
+<!-- Source code here -->
+<script>
+    var DBNAME='game';
+    var GAMENAME='maze';
+</script>
+
+<script src="app.js"></script>
+
+<body>
+<style>
+    body {
+        padding: 8px;
+        font-family: Helvetica;
+    }
+
+    .player {
+        border: 1px #000 solid;
+        border-radius: 100px;
+        position: absolute;
+    }
+
+    #buttons {
+        touch-action: manipulation;
+        padding: 16px;
+    }
+
+    .button {
+        width: 60px;
+        height: 60px
+    }
+</style>
+<title>Maze Real-Time with Firebase Demo</title>
+<B> Vivek's Maze Project Demo </B><BR>
+Use buttons (or arrow-keys) to move to the bottom-right.
+<BR><BR>
+
+<div style='position:absolute' id=players>
+</div>
+<table>
+    <TR>
+        <TD>
+            <canvas id="canvas" style="border:1px solid #000000;">
+            </canvas>
+            <script src="maze.js"></script>
+            <div id=buttons>
+                <center>
+                    <table>
+                        <TR>
+                            <TD></td>
+                            <TD>
+                                <center> <input type=button class=button value="Up" onclick="goUp()"></center>
+                            </td>
+                            <TD>
+                            </td>
+                        </tr>
+                        <TR>
+                            <TD>
+                                <input type=button class=button value="Left" onclick="goLeft()"></td>
+                            <TD>
+                                <input type=button class=button value="Down" onclick="goDown()">
+                            </td>
+                            <TD>
+                                <input type=button class=button value="Right" onclick="goRight()">
+                            </td>
+                        </tr>
+                    </table>
+                </center>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<BR><BR><BR>
+</body>

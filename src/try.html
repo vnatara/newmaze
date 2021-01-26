@@ -1,0 +1,95 @@
+<!--
+Boom Biatch
+-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<!-- Source code here -->
+<script>
+    var DBNAME='game';
+    var GAMENAME='maze';
+</script>
+<script src="maze.js"></script>
+<script src="app.js"></script>
+
+<body>
+<style>
+    body {
+        padding: 8px;
+        font-family: Helvetica;
+    }
+
+    .player {
+        border: 1px #000 solid;
+        border-radius: 100px;
+        position: absolute;
+    }
+
+    #buttons {
+        touch-action: manipulation;
+        padding: 16px;
+    }
+
+    .button {
+        width: 60px;
+        height: 60px
+    }
+</style>
+<title>Maze Real-Time with Firebase Demo</title>
+<B> Maze Real-Time with Firebase Demo</B><BR>
+Use buttons (or arrow-keys) to move to the bottom-right.
+<BR><BR>
+
+<div style='position:absolute' id=players>
+
+</div>
+<table>
+    <TR>
+        <TD>
+            <canvas id="canvas" style="border:1px solid #000000;">
+            </canvas>
+            <div id=buttons>
+                <center>
+                    <table>
+                        <TR>
+                            <TD></td>
+                            <TD>
+                                <center> <input type=button class=button value="Up" onclick="goUp()"></center>
+                            </td>
+                            <TD>
+                            </td>
+                        </tr>
+                        <TR>
+                            <TD>
+                                <input type=button class=button value="Left" onclick="goLeft()"></td>
+                            <TD>
+                                <input type=button class=button value="Down" onclick="goDown()">
+                            </td>
+                            <TD>
+                                <input type=button class=button value="Right" onclick="goRight()">
+                            </td>
+                        </tr>
+                    </table>
+                </center>
+            </div>
+        </td>
+    </tr>
+</table>
+<div style='width:500px'>
+    This demo is brought to you by
+    <a target=_blank href="http://coderpro.com/">http://coderpro.com</a>, for over 70 videos on
+    coding interview questions covering data structures, algorithms, time-space
+    analysis, and more. Ace your next technical interview with <a target=_blank
+                                                                  href="http://coderpro.com">http://coderpro.com</a>.
+    <BR><BR>
+    <B>Source Code</B>: Right-click <i>View Page Source</i> for the source.
+    <BR>
+    - <a href=maze.js>/maze.js</a><BR>
+    - <a href=app.js>/app.js</a><BR>
+    - <a href=source.php>/index.html</a><BR>
+    <BR>
+
+    Built at <a href="https://www.youtube.com/watch?v=H7kvrvtpdYg">http://youtube.com/techlead</a>
+</div>
+<BR><BR><BR>
+</body>
